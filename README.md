@@ -24,7 +24,7 @@ Check out the live demo of VocaScribe: [VocaScribe Demo](https://vocascribe.netl
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/vocascribe.git
+   git clone https://github.com/Cleveridiot07/Vocascribe-Text-to-Speech-convertor.git
    ```
 
 2. Navigate to the project directory:
