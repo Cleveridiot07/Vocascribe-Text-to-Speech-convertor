@@ -280,7 +280,7 @@
   }
   
   .transcript-textarea {
-    width: 100%;
+    width: 90%;
     height: 16rem;
     padding: 1rem;
     background: var(--color-gray-50);
