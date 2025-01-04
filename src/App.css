@@ -1,0 +1,332 @@
+:root {
+    --color-emerald-50: #ecfdf5;
+    --color-emerald-500: #10b981;
+    --color-emerald-600: #059669;
+    --color-red-500: #ef4444;
+    --color-red-600: #dc2626;
+    --color-gray-50: #f9fafb;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-500: #6b7280;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  .container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, var(--color-emerald-50), #e0f2f1);
+    padding: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      padding: 2rem;
+    }
+  }
+  
+  .header {
+    max-width: 64rem;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .header-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-emerald-600);
+  }
+  
+  .header-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-gray-800);
+    margin: 0;
+  }
+  
+  .main {
+    max-width: 64rem;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    padding: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .card {
+      padding: 2rem;
+    }
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-gray-700);
+  }
+  
+  .toggle {
+    position: relative;
+    width: 2.75rem;
+    height: 1.5rem;
+    border-radius: 999px;
+    background: var(--color-gray-200);
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+  }
+  
+  .toggle[data-checked="true"] {
+    background: var(--color-emerald-500);
+  }
+  
+  .toggle:focus {
+    outline: 2px solid var(--color-emerald-500);
+    outline-offset: 2px;
+  }
+  
+  .toggle-handle {
+    position: absolute;
+    left: 0.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  .toggle[data-checked="true"] .toggle-handle {
+    transform: translate(1.25rem, -50%);
+  }
+  
+  .language-select {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .select-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-gray-700);
+  }
+  
+  .select-wrapper {
+    position: relative;
+  }
+  
+  .select {
+    width: 100%;
+    appearance: none;
+    background: var(--color-gray-50);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    padding-right: 2rem;
+    color: var(--color-gray-700);
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: all 0.2s;
+  }
+  
+  .select:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 0 2px var(--color-emerald-500);
+  }
+  
+  .select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .select:hover:not(:disabled) {
+    background: var(--color-gray-100);
+  }
+  
+  .select-icon {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--color-gray-700);
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color-emerald-500);
+  }
+  
+  .button-start {
+    background: var(--color-emerald-500);
+    color: white;
+  }
+  
+  .button-start:hover {
+    background: var(--color-emerald-600);
+  }
+  
+  .button-stop {
+    background: var(--color-red-500);
+    color: white;
+  }
+  
+  .button-stop:hover {
+    background: var(--color-red-600);
+  }
+  
+  .transcript {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .transcript-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-gray-700);
+  }
+  
+  .transcript-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .recording-indicator {
+    position: relative;
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  
+  .recording-dot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--color-red-500);
+  }
+  
+  .recording-dot-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--color-red-400);
+    opacity: 0.75;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.75;
+      transform: scale(2);
+    }
+  }
+  
+  .transcript-container {
+    position: relative;
+  }
+  
+  .transcript-textarea {
+    width: 100%;
+    height: 16rem;
+    padding: 1rem;
+    background: var(--color-gray-50);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 0.5rem;
+    color: var(--color-gray-700);
+    font-family: ui-monospace, monospace;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    resize: none;
+  }
+  
+  .transcript-textarea:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 0 2px var(--color-emerald-500);
+  }
+  
+  .transcript-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(249, 250, 251, 0.8);
+    border-radius: 0.5rem;
+    color: var(--color-gray-500);
+  }
+  
+  .partial-transcript {
+    background: var(--color-emerald-50);
+    border-left: 4px solid var(--color-emerald-500);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    font-family: ui-monospace, monospace;
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .partial-transcript:empty::before {
+    content: "Waiting for speech...";
+    color: var(--color-gray-500);
+    font-style: italic;
+  }
+  
